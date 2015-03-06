@@ -281,7 +281,7 @@ namespace WebInfo
                 //UTF8でバイト配列にエンコードする
                 var postData = HttpUtility.UrlEncode(search, Encoding.UTF8);
 
-                booksURL = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20130522?applicationId=1039656734163992203&title=";
+                booksURL = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20130522?applicationId=XXXXXXXX&title=";
                 format = "&format=xml";
                 hits = "&hits=10";
                 //楽天ブックスのキーワード検索 "C%23%e8%a8%80%e8%aa%9e"
@@ -344,7 +344,7 @@ namespace WebInfo
                     }
                 }
 
-                genreURL = "https://app.rakuten.co.jp/services/api/BooksGenre/Search/20121128?applicationId=1039656734163992203&booksGenreId=";
+                genreURL = "https://app.rakuten.co.jp/services/api/BooksGenre/Search/20121128?applicationId=XXXXXXXX&booksGenreId=";
 
                 WebRequest WebReqList;
                 WebResponse webResList;
