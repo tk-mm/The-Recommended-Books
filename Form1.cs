@@ -24,10 +24,10 @@ namespace WebInfo
 
         //Twitterアカウントのトークン
         private CoreTweet.Tokens tokens = CoreTweet.Tokens.Create(
-                "5idyIHnh9qaC8soaRH5TItnqZ"
-                , "pBbcXOPxdOTMfMRmsEamBV0zzcHzDOAMeBUoFgBoyW9U46I9EF"
-                , "2908803210-P5xyJJCw3P7O45BWyQXtpxFMbSrOr4FPSvQbsfU"
-                , "ixzMIrbSpnoSpkJOdycMVtIllWAEVCf80lEDZMZRdMbF1");
+                "CONSUMER_KEY"
+                , "CONSUMER_SECRET"
+                , "ACCESS_TOKEN"
+                , "ACCESS_TOKEN_SECRET");
 
         //楽天ブックスで検索したタイトルのリスト
         private List<string> title, publisherName, largeImageUrl;
@@ -468,7 +468,8 @@ namespace WebInfo
                 var releaseDate = HttpUtility.UrlEncode("-releaseDate", Encoding.UTF8);
                 var genre = "&booksGenreId=" + posiGerneId;
 
-                booksURL = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20130522?applicationId=1039656734163992203&title=";
+                //楽天のApplicationId
+                booksURL = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20130522?applicationId=XXXXXXXX&title=";
                 format = "&format=xml";
                 hits = "&hits=10";
                 //楽天ブックスのキーワード検索
@@ -605,7 +606,7 @@ namespace WebInfo
                     }
                 }
 
-                genreURL = "https://app.rakuten.co.jp/services/api/BooksGenre/Search/20121128?applicationId=1039656734163992203&booksGenreId=";
+                genreURL = "https://app.rakuten.co.jp/services/api/BooksGenre/Search/20121128?applicationId=XXXXXXXX&booksGenreId=";
 
                 WebRequest WebReqList;
                 WebResponse webResList;
@@ -839,7 +840,7 @@ namespace WebInfo
                     XmlDocument doc = new XmlDocument();
                     string search = item;
 
-                    booksURL = "https://app.rakuten.co.jp/services/api/BooksTotal/Search/20130522?applicationId=1039656734163992203&keyword=";
+                    booksURL = "https://app.rakuten.co.jp/services/api/BooksTotal/Search/20130522?applicationId=XXXXXXXX&keyword=";
                     format = "&format=xml";
                     hits = "&hits=10";
                     string sort = "&sort=";
